@@ -1,0 +1,37 @@
+/*
+Theme Name: Protótipo Bootstrap
+Theme URI: 
+Description: Esse tema é limpo totalmente básico para que se possa desenvolver protótipos de layouts MVP em html utilizando bootstrap diretamente nas páginas e posts.
+Author: Rafael Pires
+Author URI: 
+Version: 1.0
+Tags: bootstrap
+
+License: GNLU
+*/
+
+/* menu ativo */
+.navbar .nav > .current-menu-item > a,
+.navbar .nav > .current-menu-item > a:hover,
+.navbar .nav > .current-menu-item > a:focus {
+  color: ##0088CC;
+  text-decoration: none;
+  background-color: #e5e5e5;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+
+/* ajuste de layout da home - protótipo */
+#titulo_home{font-size:25px; text-align:center;}
+
+#titulo_home {
+    background-color: orange;
+    font-size: 26px;
+    margin-bottom: 54px;
+    text-align: center;
+}
+
+.cdi_tudo_maiusculo {
+	text-transform: uppercase;
+}
