@@ -38,3 +38,5 @@ wp-includes/*
 /sitemap.xml
 /sitemap.xml.gz
 /*.xml
+/*.zip
+/*.txt
