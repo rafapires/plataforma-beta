@@ -22,7 +22,7 @@
 		
 		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
-		<link rel="stylesheet" href="<?php bloginfo(stylesheet_directory) ?>/plataforma.css" type="text/css">
+		<link rel="stylesheet" href="<?php bloginfo(template_url) ?>/plataforma.css" type="text/css" media="all">
 	</head>
 	
 	<body <?php body_class(); ?>>
