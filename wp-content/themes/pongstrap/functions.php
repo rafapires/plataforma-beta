@@ -254,6 +254,13 @@ function the_bootstrap_register_scripts_styles() {
 			array('tw-bootstrap'),
 			$theme_version
 		);
+
+		wp_register_style(
+			'plataforma',
+			get_template_directory_uri() . "/plataforma.css",
+			array(),
+			$theme_version
+		);
 	}
 }
 add_action( 'init', 'the_bootstrap_register_scripts_styles' );
