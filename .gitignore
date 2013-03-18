@@ -40,3 +40,5 @@ wp-includes/*
 /*.xml
 /*.zip
 /*.txt
+/*.json
+/wp-content/themes/*.zip
