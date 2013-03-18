@@ -7,21 +7,20 @@
  * @package pongstrap
  * @since	1.3.0	- 29.04.2012
  */
-
 get_header(); ?>
 
 <section id="primary" class="span12">
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
+	<div id="content" class='cdi_parceiros' role="main">
 		<?php tha_content_top();
 		
-		$cdi_tipos_parceiros = get_terms('tipo-parceiros', array( 	'orderby' => 'rand',
-												'hide_empty' => 0 ));
+		$cdi_tipos_parceiros = get_terms('tipo-parceiros');
 
 		foreach ($cdi_tipos_parceiros as $cdi_tipo_parceiro) {
 			echo '<h3>'.$cdi_tipo_parceiro->name.'</h3><hr />';
 			$cdi_parceiros = get_posts ( array(	'post_type' => 'parceiro' ,
-											'tipo-parceiros' => $cdi_tipo_parceiro->name ));
+												'orderby' => 'rand',
+												'tipo-parceiros' => $cdi_tipo_parceiro->name ));
 			?>
 			
 			<ul class='thumbnails'>
@@ -30,13 +29,13 @@ get_header(); ?>
 					setup_postdata( $post );
 					?>
 					<li class='span3'>
-						<div class='thumbnail'>
+						<div id='cdi_celula_parceiro' class='thumbnail'>
 							<a href='<?php print_custom_field('urlparceiro');?>'>
 								<div id='cdi_logo_parceiro'>
 									<?php the_post_thumbnail(); ?>
 								</div>
 								<h3><?php the_title(); ?></h3>
-								<p><?php print_custom_field('descricaoparceiros'); ?></p>
+								<p><?php echo substr(get_custom_field('descricaoparceiros'), 0,120); ?></p>
 							</a>
 						</div>
 					</li>
