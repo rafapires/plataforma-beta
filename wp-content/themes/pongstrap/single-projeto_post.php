@@ -10,8 +10,11 @@
 
 get_header();
 global $post;
-$cdi_projeto_post_id_atual = $post->ID; ?>
+ echo custom_taxonomies_terms_slugs(); 
+							die();
 
+$cdi_projeto_post_id_atual = $post->ID;
+?>
 <section id="primary" class="span12">
 	<?php tha_content_before(); ?>
 	<div id="content" role="main" class='row-fluid'>
@@ -22,6 +25,29 @@ $cdi_projeto_post_id_atual = $post->ID; ?>
 			<h3><?php the_title();?></h3>
 			<?php the_post();?>
 			<?php echo the_content ();?>
+			<div class='row-fluid'>
+				<div class='span6 cdi_box'>
+					<h4 class='cdi_head_box'>Notícias relacionadas</h4>
+					<div class='cdi_content_box'>
+						<?php
+							$cdi_posts_relacionado_ao_projeto = get_posts (array (
+									'post_type'		=> 'post',
+									'projetos'		=> $termos_existentes_neste_projeto
+								));
+							echo '<pre>';
+							print_r($cdi_posts_relacionado_ao_projeto);
+							echo '</pre>';
+
+
+
+
+
+
+						?>
+					</div>
+				</div>
+			</div>
+
 		</div>
 		<div class='span4'>
 			<!-- BOX COM NUMEROS DO PROJETO -->
