@@ -975,7 +975,7 @@ if( !class_exists( 'BasicGoogleMapsPlacemarks' ) )
 		public function getMapOptions()
 		{
 			$options = array(
-				'mapWidth'				=> $this->settings->mapWidth,
+				'mapWidth'				=> '100%',
 				'mapHeight'				=> $this->settings->mapHeight,
 				'latitude'				=> $this->settings->mapLatitude,
 				'longitude'				=> $this->settings->mapLongitude,
