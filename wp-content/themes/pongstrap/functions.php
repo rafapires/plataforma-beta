@@ -1086,17 +1086,11 @@ function _the_bootstrap_version() {
 /* cdi */
 
 // get taxonomies terms links
-function custom_taxonomies_terms_slugs() {
-	global $post, $post_id;
-	// get post by post id
-	$post = &get_post($post->ID);
-	// get post type by post
-	$post_type = $post->post_type;
-	// get post type taxonomies
-	$taxonomies = get_object_taxonomies($post_type);
+function custom_taxonomies_terms_slugs($cdi_postID) {
+	$taxonomies = get_object_taxonomies($cdi_postID->post_type);
 	foreach ($taxonomies as $taxonomy) {
 		// get the terms related to post
-		$terms = get_the_terms( $post->ID, $taxonomy );
+		$terms = get_the_terms( $cdi_postID->ID, $taxonomy );
 		if ( !empty( $terms ) ) {
 			$out = array();
 			foreach ( $terms as $term )

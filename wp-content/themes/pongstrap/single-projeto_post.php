@@ -11,6 +11,14 @@
 get_header();
 global $post;
 remove_filter ('the_excerpt', 'wpautop');
+function termos_existentes_neste_projeto($termos_existentes_neste_projeto) {
+	$saida = array();
+	foreach ($termos_existentes_neste_projeto as $termo) {
+		$saida[]=$termo;
+		$return = join(', ', $saida);
+	}
+	return $return;
+}
 
 
 $cdi_projeto_post_id_atual = $post->ID;
@@ -25,6 +33,8 @@ $cdi_projeto_post_id_atual = $post->ID;
 			<h3><?php the_title();?></h3>
 			<?php the_post();?>
 			<?php echo the_content ();?>
+			
+			<!-- carrega lista de noticias relacionadas -->
 			<div class='row-fluid'>
 				<div class='cdi_box'>
 					<h4 class='cdi_head_box'>Notícias relacionadas</h4>
@@ -32,9 +42,10 @@ $cdi_projeto_post_id_atual = $post->ID;
 						<?php
 						$cdi_posts_relacionado_ao_projeto = get_posts (array (
 								'post_type'		=> 'post',
-								'projetos'		=> $termos_existentes_neste_projeto
+								'projetos'		=> termos_existentes_neste_projeto(custom_taxonomies_terms_slugs($post))
 							));
 						?>
+
 						<div class='row-fluid'>
 						<ul class='thumbnails'>
 							<?php
