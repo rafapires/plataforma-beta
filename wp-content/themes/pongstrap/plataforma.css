@@ -72,3 +72,64 @@ border-top: 1px solid #9CBFCF;
 margin: 0 0 5px 0;
 border-bottom: 1px solid rgb(175, 199, 211);
 }
+
+/* box de destaque -- utilizado nas laterais da pagina de projetos */
+
+.cdi_head_box {
+    background: none repeat scroll 0 0 #9CBFCF;
+    -webkit-border-radius: 12px 12px 0 0;
+    -moz-border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+    padding: 10px;
+}
+
+.cdi_content_box {
+    background-color: #FFFFFF;
+    -webkit-border-radius: 0 0 12px 12px;
+    -moz-border-radius: 0 0 12px 12px;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.cdi_box {
+    -webkit-box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+
+.cdi_content_box > .nav.nav-pills a {
+    background-color: #EEEEEE;
+}
+
+/* lista de noticias */
+.cdi_content_box .thumbnail.row-fluid {
+    background-color: #F5F5F5;
+    margin-left: 0;
+}
+
+.cdi_content_box h4 {
+    line-height: 120%;
+    margin: 0;
+    padding: 0 10px;
+}
+
+
+.cdi_content_box p {
+    padding: 0 10px;
+    text-align: justify;
+}
+
+.cdi_thumb_lista_noticia img {
+    border-radius: 88px 88px 88px 88px;
+    margin: 4px 23px;
+}
+
+.cdi_content_box .btn {
+    padding: 0 8px;
+    position: relative;
+}

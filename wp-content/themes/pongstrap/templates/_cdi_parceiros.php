@@ -17,10 +17,11 @@ get_header(); ?>
 		$cdi_tipos_parceiros = get_terms('tipo-parceiros');
 
 		foreach ($cdi_tipos_parceiros as $cdi_tipo_parceiro) {
+
 			echo '<h3>'.$cdi_tipo_parceiro->name.'</h3><hr />';
 			$cdi_parceiros = get_posts ( array(	'post_type' => 'parceiro' ,
 												'orderby' => 'rand',
-												'tipo-parceiros' => $cdi_tipo_parceiro->name ));
+												'tipo-parceiros' => $cdi_tipo_parceiro->slug ));
 			?>
 			
 			<ul class='thumbnails'>
