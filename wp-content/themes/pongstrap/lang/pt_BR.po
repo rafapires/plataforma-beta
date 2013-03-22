@@ -254,7 +254,7 @@ msgstr "Pages:"
 #: partials/content-image.php:16 partials/content-page.php:18
 #: partials/content-status.php:19 partials/content.php:41
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "<span class='btn'>Leia mais</span>"
 
 # @ the-bootstrap
 #: functions.php:393
