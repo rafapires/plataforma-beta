@@ -10,6 +10,7 @@
 
 get_header();
 global $post;
+remove_filter ('the_excerpt', 'wpautop');
 
 
 $cdi_projeto_post_id_atual = $post->ID;
@@ -48,7 +49,7 @@ $cdi_projeto_post_id_atual = $post->ID;
 									<?php }else{ ?>
 										<div>
 									<?php } ?>
-											<h3><?php the_title();?></h3>
+											<h4><?php the_title();?></h4>
 											<p><?php the_excerpt();?></p>
 										</div>
 								</li>
