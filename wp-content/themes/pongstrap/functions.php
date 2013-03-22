@@ -1101,10 +1101,9 @@ function custom_taxonomies_terms_slugs() {
 			$out = array();
 			foreach ( $terms as $term )
 				$out[] = $term->slug;
-			$return = join( ', ', $out );
 		}
 	}
-	return $return;
+	return $out;
 } 
 
 
