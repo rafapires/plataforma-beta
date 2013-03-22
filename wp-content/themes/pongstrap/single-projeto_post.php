@@ -11,6 +11,9 @@
 get_header();
 global $post;
 remove_filter ('the_excerpt', 'wpautop');
+$cdi_titulo_box_numeros_projeto = $post->post_title;
+$cdi_numeros_do_projeto = get_custom_field('numerosprojeto');
+
 function termos_existentes_neste_projeto($termos_existentes_neste_projeto) {
 	$saida = array();
 	foreach ($termos_existentes_neste_projeto as $termo) {
@@ -75,13 +78,15 @@ $cdi_projeto_post_id_atual = $post->ID;
 		</div>
 		<div class='span4'>
 			<!-- BOX COM NUMEROS DO PROJETO -->
-			<?php if( get_custom_field('numerosprojeto') ) {?>
-			<div class='cdi_box'>
-				<h5 class='cdi_head_box'><?php echo the_title();?> em números</h5>
-				<div class='cdi_content_box'>
-					<?php print_custom_field('numerosprojeto:do_shortcode'); ?>
+			<?php
+			if( !empty($cdi_numeros_do_projeto)) {
+			?>
+				<div class='cdi_box'>
+					<h5 class='cdi_head_box'><?php echo $cdi_titulo_box_numeros_projeto;?> em números</h5>
+					<div class='cdi_content_box'>
+						<?php echo $cdi_numeros_do_projeto; ?>
+					</div>
 				</div>
-			</div>
 			<?php }?>
 			<!-- BOX COM LISTA RAND DE OUTROS PROJETOS -->
 			<?php
