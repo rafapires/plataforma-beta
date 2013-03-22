@@ -1083,6 +1083,25 @@ function _the_bootstrap_version() {
 	return $theme_version;
 }
 
+/* cdi */
+
+// get taxonomies terms links
+function custom_taxonomies_terms_slugs($cdi_postID) {
+	$taxonomies = get_object_taxonomies($cdi_postID->post_type);
+	foreach ($taxonomies as $taxonomy) {
+		// get the terms related to post
+		$terms = get_the_terms( $cdi_postID->ID, $taxonomy );
+		if ( !empty( $terms ) ) {
+			$out = array();
+			foreach ( $terms as $term )
+				$out[] = $term->slug;
+		}
+	}
+	return $out;
+} 
+
+
 
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */
+?>
