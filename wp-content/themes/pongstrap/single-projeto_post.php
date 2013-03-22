@@ -10,8 +10,11 @@
 
 get_header();
 global $post;
-$cdi_projeto_post_id_atual = $post->ID; ?>
+remove_filter ('the_excerpt', 'wpautop');
 
+
+$cdi_projeto_post_id_atual = $post->ID;
+?>
 <section id="primary" class="span12">
 	<?php tha_content_before(); ?>
 	<div id="content" role="main" class='row-fluid'>
@@ -22,6 +25,42 @@ $cdi_projeto_post_id_atual = $post->ID; ?>
 			<h3><?php the_title();?></h3>
 			<?php the_post();?>
 			<?php echo the_content ();?>
+			<div class='row-fluid'>
+				<div class='cdi_box'>
+					<h4 class='cdi_head_box'>Notícias relacionadas</h4>
+					<div class='cdi_content_box'>
+						<?php
+						$cdi_posts_relacionado_ao_projeto = get_posts (array (
+								'post_type'		=> 'post',
+								'projetos'		=> $termos_existentes_neste_projeto
+							));
+						?>
+						<div class='row-fluid'>
+						<ul class='thumbnails'>
+							<?php
+							foreach ($cdi_posts_relacionado_ao_projeto as $post) { 
+								setup_postdata( $post );?>
+								<li class='thumbnail row-fluid'>
+									<?if(has_post_thumbnail()){?>
+										<div class='cdi_thumb_lista_noticia span3 align-center'>
+											<?php the_post_thumbnail('thumbnail');?>
+										</div>
+										<div class='span9'>
+									<?php }else{ ?>
+										<div>
+									<?php } ?>
+											<h4><?php the_title();?></h4>
+											<p><?php the_excerpt();?></p>
+										</div>
+								</li>
+							<?php }?>
+						</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
 		</div>
 		<div class='span4'>
 			<!-- BOX COM NUMEROS DO PROJETO -->
