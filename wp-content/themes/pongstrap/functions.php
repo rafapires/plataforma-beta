@@ -564,7 +564,7 @@ add_action( 'comment_form_comments_closed', 'the_bootstrap_comments_closed' );
  */
 function the_bootstrap_comment_form_defaults( $defaults ) {
 	return wp_parse_args( array(
-		'comment_field'			=>	'<div class="comment-form-comment control-group"><label class="control-label" for="comment">' . _x( 'Comment', 'noun', 'the-bootstrap' ) . '</label><div class="controls"><textarea class="span7" id="comment" name="comment" rows="8" aria-required="true"></textarea></div></div>',
+		'comment_field'			=>	'<div class="comment-form-comment control-group"><label class="span12" for="comment">' . _x( 'Comment', 'noun', 'the-bootstrap' ) . '</label><div class="controls span12"><textarea class="input-block-level" id="comment" name="comment" rows="8" aria-required="true"></textarea></div></div>',
 		'comment_notes_before'	=>	'',
 		'comment_notes_after'	=>	'<div class="form-allowed-tags control-group"><label class="control-label">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'the-bootstrap' ), '</label><div class="controls"><pre>' . allowed_tags() . '</pre></div>' ) . '</div>
 									 <div class="form-actions">',
@@ -702,9 +702,9 @@ function the_bootstrap_comment_form_field_author( $html ) {
 	$aria_req	=	( $req ? " aria-required='true'" : '' );
 	
 	return	'<div class="comment-form-author control-group">
-				<label for="author" class="control-label">' . __( 'Name', 'the-bootstrap' ) . '</label>
-				<div class="controls">
-					<input id="author" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
+				<label for="author" class="control-label span3">' . __( 'Name', 'the-bootstrap' ) . '</label>
+				<div class="controls span9">
+					<input id="author" class="input-block-level" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
 					' . ( $req ? '<p class="help-inline"><span class="required">' . __('required', 'the-bootstrap') . '</span></p>' : '' ) . '
 				</div>
 			</div>';
@@ -728,9 +728,9 @@ function the_bootstrap_comment_form_field_email( $html ) {
 	$aria_req	=	( $req ? " aria-required='true'" : '' );
 	
 	return	'<div class="comment-form-email control-group">
-				<label for="email" class="control-label">' . __( 'Email', 'the-bootstrap' ) . '</label>
-				<div class="controls">
-					<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
+				<label for="email" class="control-label span3">' . __( 'Email', 'the-bootstrap' ) . '</label>
+				<div class="controls span9">
+					<input id="email" class="input-block-level" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
 					<p class="help-inline">' . ( $req ? '<span class="required">' . __('required', 'the-bootstrap') . '</span>, ' : '' ) . __( 'will not be published', 'the-bootstrap' ) . '</p>
 				</div>
 			</div>';
@@ -752,9 +752,9 @@ function the_bootstrap_comment_form_field_url( $html ) {
 	$commenter	=	wp_get_current_commenter();
 	
 	return	'<div class="comment-form-url control-group">
-				<label for="url" class="control-label">' . __( 'Website', 'the-bootstrap' ) . '</label>
-				<div class="controls">
-					<input id="url" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" />
+				<label for="url" class="control-label span3">' . __( 'Website', 'the-bootstrap' ) . '</label>
+				<div class="controls span9">
+					<input id="url" class="input-block-level" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" />
 				</div>
 			</div>';
 }
