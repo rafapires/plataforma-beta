@@ -20,6 +20,7 @@ get_header(); ?>
 
 			echo '<h3>'.$cdi_tipo_parceiro->name.'</h3><hr />';
 			$cdi_parceiros = get_posts ( array(	'post_type' => 'parceiro' ,
+												'numberposts' => 24,
 												'orderby' => 'rand',
 												'tipo-parceiros' => $cdi_tipo_parceiro->slug ));
 			?>
@@ -29,16 +30,18 @@ get_header(); ?>
 				foreach ($cdi_parceiros as $post) {
 					setup_postdata( $post );
 					?>
-					<li class='span3'>
-						<div id='cdi_celula_parceiro' class='thumbnail'>
-							<a href='<?php print_custom_field('urlparceiro');?>'>
-								<div id='cdi_logo_parceiro'>
-									<?php the_post_thumbnail(); ?>
-								</div>
-								<h3><?php the_title(); ?></h3>
-								<p><?php echo substr(get_custom_field('descricaoparceiros'), 0,120); ?></p>
+					<li class='span2'>
+						<?php 
+						$cdi_link_parceiro = get_custom_field('urlparceiro');
+
+
+						if ($cdi_link_parceiro != 'http://' AND !empty($cdi_link_parceiro)) { ?>
+							<a target='_blank' href='<?php echo $cdi_link_parceiro; ?>' class='thumbnail'>							
+						<?php }else{ ?>
+							<a class='thumbnail'>
+						<?php } ?>
+								<?php the_post_thumbnail(); ?>
 							</a>
-						</div>
 					</li>
 				<?php }?>
 			</ul>
