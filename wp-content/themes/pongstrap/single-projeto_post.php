@@ -38,9 +38,9 @@ $cdi_projeto_post_id_atual = $post->ID;
 			<?php echo the_content ();?>
 			
 			<!-- carrega lista de noticias relacionadas -->
-			<div class='row-fluid'>
+			<div id='cdi_lista_noticias' class='row-fluid'>
 				<div class='cdi_box'>
-					<h4 class='cdi_head_box'>Notícias relacionadas</h4>
+					<h4 class='cdi_head_box cdi_vermelho_forte'>Notícias relacionadas</h4>
 					<div class='cdi_content_box'>
 						<?php
 						$cdi_posts_relacionado_ao_projeto = get_posts (array (
@@ -106,6 +106,10 @@ $cdi_projeto_post_id_atual = $post->ID;
 						<?php } ?>
 					</ul>
 				</div>
+			</div>
+			<!-- Comments -->
+			<div class='cdi_box'>
+				<?php comments_template('/comments_span4.php');?>
 			</div>
 
 
