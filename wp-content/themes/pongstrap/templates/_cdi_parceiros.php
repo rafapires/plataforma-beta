@@ -20,7 +20,7 @@ get_header(); ?>
 
 			echo '<h3>'.$cdi_tipo_parceiro->name.'</h3><hr />';
 			$cdi_parceiros = get_posts ( array(	'post_type' => 'parceiro' ,
-												'numberposts' => 20,
+												'numberposts' => 24,
 												'orderby' => 'rand',
 												'tipo-parceiros' => $cdi_tipo_parceiro->slug ));
 			?>
