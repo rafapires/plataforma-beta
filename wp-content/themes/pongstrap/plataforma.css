@@ -28,37 +28,11 @@ body {
 
 /* ajustes da pagina parceiros*/
 
-#cdi_logo_parceiro {
-background-color: #ffffff;
-min-height: 246px;
-margin: 8px;
-border-radius: 20px;
-}
-
-#cdi_celula_parceiro {
-background-color: rgb(233, 233, 231);
-border: none;
-border-radius: 6px;
-}
-
-#cdi_celula_parceiro h3 {
-background-color: #9CBFCF;
-padding: 0px 10px;
-margin: -4px;
-color: white;
-margin-bottom: 5px;
-margin-top: 10px;
-}
-
-#cdi_celula_parceiro a, #cdi_celula_parceiro a:hover {
-text-decoration: none;
-}
-
-#cdi_celula_parceiro p {
-line-height: 110%;
-text-align: justify;
-padding: 10px;
-font-size: 12px;
+.cdi_parceiros .thumbnail {
+    background-color: #FFFFFF;
+    border-radius: 12px 12px 12px 12px;
+    border-width: 0;
+    box-shadow: 3px 3px 3px lightgray;
 }
 
 .cdi_parceiros h3 {
@@ -69,7 +43,7 @@ color: #9CBFCF;
 
 .cdi_parceiros hr {
 border-top: 1px solid #9CBFCF;
-margin: 0 0 5px 0;
+margin: 0 0 15px 0;
 border-bottom: 1px solid rgb(175, 199, 211);
 }
 
