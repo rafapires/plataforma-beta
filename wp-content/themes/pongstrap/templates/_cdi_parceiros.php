@@ -36,7 +36,7 @@ get_header(); ?>
 
 
 						if ($cdi_link_parceiro != 'http://' AND !empty($cdi_link_parceiro)) { ?>
-							<a href='<?php echo $cdi_link_parceiro; ?>' class='thumbnail'>							
+							<a target='_blank' href='<?php echo $cdi_link_parceiro; ?>' class='thumbnail'>							
 						<?php }else{ ?>
 							<a class='thumbnail'>
 						<?php } ?>
