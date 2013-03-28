@@ -26,7 +26,7 @@ get_header(); ?>
 				<div class="span6 well cdi_red_border">
 				<h3 class="cdi_title_box cdi_red">HISTÓRIA</h3>
 				<p class="cdi_descricao">Há 18 anos, o CDI usa a tecnologia para estimular o empreendedorismo e a cidadania, por meio de seus 780 espaços de inclusão digital existentes no Brasil e no mundo. (…)</p>
-				<a class="btn btn-danger pull-right ">SAIBA MAIS</a>
+				<a href='<?php echo site_url(); ?>/quem-somos/historia/' class="btn btn-danger pull-right ">SAIBA MAIS</a>
 			</div>
 
 			<h3 class="span12 cdi_top_title">METODOLOGIA</h3>
