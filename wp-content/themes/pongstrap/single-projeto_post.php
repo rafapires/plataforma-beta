@@ -107,10 +107,6 @@ $cdi_projeto_post_id_atual = $post->ID;
 					</ul>
 				</div>
 			</div>
-			<!-- Comments -->
-			<div class='cdi_box'>
-				<?php comments_template('/comments_span4.php');?>
-			</div>
 
 
 
