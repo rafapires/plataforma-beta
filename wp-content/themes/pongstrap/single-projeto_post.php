@@ -119,7 +119,7 @@ $cdi_projeto_post_id_atual = $post->ID;
 						<?php
 						foreach ($cdi_projetos_rand as $post) {
 							setup_postdata( $post );?>
-							<li><a href='<?php echo $post->guid;?>'><?echo $post->post_title;?></a></li>
+							<li><a href='<?php the_permalink();?>'><?echo the_title();?></a></li>
 						<?php } ?>
 					</ul>
 				</div>
