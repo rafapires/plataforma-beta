@@ -139,3 +139,59 @@ border-bottom: 1px solid rgb(175, 199, 211);
 #cdi_call_to_action.well.well-large {
     background-color: #9CBFCF;
 }
+
+/* quem somos */
+.cdi_quem_somos .well {
+    min-height: 164px;
+    padding: 8px 10px 10px 16px;
+}
+
+.cdi_green {
+    color: green;
+}
+
+.cdi_title_box {
+    margin: 0 0 10px;
+}
+
+.cdi_blue {
+    color: blue;
+}
+
+.cdi_red_border {
+    border-color: red;
+}
+
+.cdi_green_border {
+    border-color: green;
+}
+
+.cdi_blue_border {
+    border-color: blue;
+}
+
+.cdi_quem_somos .span12.alignnone.size-full {
+    margin: 0 0 20px;
+}
+
+.cdi_quem_somos img {
+    margin: 19px;
+}
+
+.cdi_quem_somos h4 {
+    background-color: #BFBFBF;
+    color: white;
+    font-size: 16px;
+    padding: 6px;
+}
+
+.cdi_quem_somos .thumbnail > p {
+    padding: 0 8px;
+    text-align: left;
+}
+
+.cdi_quem_somos .thumbnail {
+    min-height: 470px;
+    padding: 0;
+    background-color: #ffffff;
+}
