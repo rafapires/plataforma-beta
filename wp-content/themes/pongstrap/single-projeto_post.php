@@ -16,9 +16,11 @@ $cdi_numeros_do_projeto = get_custom_field('numerosprojeto');
 
 function termos_existentes_neste_projeto($termos_existentes_neste_projeto) {
 	$saida = array();
-	foreach ($termos_existentes_neste_projeto as $termo) {
-		$saida[]=$termo;
-		$return = join(', ', $saida);
+	if (!empty($termos_existentes_neste_projeto)) {
+		foreach ($termos_existentes_neste_projeto as $termo) {
+			$saida[]=$termo;
+			$return = join(', ', $saida);
+		}		
 	}
 	return $return;
 }
@@ -38,43 +40,42 @@ $cdi_projeto_post_id_atual = $post->ID;
 			<?php echo the_content ();?>
 			
 			<!-- carrega lista de noticias relacionadas -->
-			<div id='cdi_lista_noticias' class='row-fluid'>
-				<div class='cdi_box'>
-					<h4 class='cdi_head_box cdi_vermelho_forte'>Notícias relacionadas</h4>
-					<div class='cdi_content_box'>
-						<?php
-						$cdi_posts_relacionado_ao_projeto = get_posts (array (
-								'post_type'		=> 'post',
-								'projetos'		=> termos_existentes_neste_projeto(custom_taxonomies_terms_slugs($post))
-							));
-						?>
+			<?php
+			$cdi_posts_relacionado_ao_projeto = get_posts (array (
+					'post_type'		=> 'post',
+					'projetos'		=> termos_existentes_neste_projeto(custom_taxonomies_terms_slugs($post))
+				));
+			if (!empty($cdi_posts_relacionado_ao_projeto)) { ?>
+				<div id='cdi_lista_noticias' class='row-fluid'>
+					<div class='cdi_box'>
+						<h4 class='cdi_head_box cdi_vermelho_forte'>Notícias relacionadas</h4>
+						<div class='cdi_content_box'>
+							<div class='row-fluid'>
+							<ul class='thumbnails'>
+								<?php
+								foreach ($cdi_posts_relacionado_ao_projeto as $post) { 
+									setup_postdata( $post );?>
+									<li class='thumbnail row-fluid'>
+										<?if(has_post_thumbnail()){?>
+											<div class='cdi_thumb_lista_noticia span3 align-center'>
+												<?php the_post_thumbnail('thumbnail');?>
+											</div>
+											<div class='span9'>
+										<?php }else{ ?>
+											<div>
+										<?php } ?>
+												<h4><?php the_title();?></h4>
+												<p><?php the_excerpt();?></p>
+											</div>
+									</li>
+								<?php }?>
+							</ul>
+							</div>
 
-						<div class='row-fluid'>
-						<ul class='thumbnails'>
-							<?php
-							foreach ($cdi_posts_relacionado_ao_projeto as $post) { 
-								setup_postdata( $post );?>
-								<li class='thumbnail row-fluid'>
-									<?if(has_post_thumbnail()){?>
-										<div class='cdi_thumb_lista_noticia span3 align-center'>
-											<?php the_post_thumbnail('thumbnail');?>
-										</div>
-										<div class='span9'>
-									<?php }else{ ?>
-										<div>
-									<?php } ?>
-											<h4><?php the_title();?></h4>
-											<p><?php the_excerpt();?></p>
-										</div>
-								</li>
-							<?php }?>
-						</ul>
 						</div>
-
 					</div>
 				</div>
-			</div>
-
+			<?php } // END if	?>
 		</div>
 		<div class='span4'>
 			<!-- BOX COM NUMEROS DO PROJETO -->
