@@ -38,6 +38,22 @@ $cdi_projeto_post_id_atual = $post->ID;
 			<h3><?php the_title();?></h3>
 			<?php the_post();?>
 			<?php echo the_content ();?>
+			<!-- carrega call ro action -->
+			<?php
+			$cdi_btn_call_to_aciton = get_custom_field('btn_cta_projetos');
+			if (!empty($cdi_btn_call_to_aciton)) {
+				$cdi_text_call_to_action = get_custom_field('text_cta_projetos');
+				$cdi_url_call_to_action = get_custom_field('urlprojeto');?>
+				<div id='cdi_call_to_action' class='well well-large'>
+					<h4><?php echo $cdi_text_call_to_action;?></h4>
+					<a class='btn btn-large btn-primary btn-block' href='<?php echo $cdi_url_call_to_action; ?>' <?php print_custom_field('target_blank'); ?> >
+						<?php echo $cdi_btn_call_to_aciton;?>
+					</a>
+				</div>
+
+			<?php } //end if?>
+
+
 			
 			<!-- carrega lista de noticias relacionadas -->
 			<?php

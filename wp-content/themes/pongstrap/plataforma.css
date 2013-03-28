@@ -142,3 +142,22 @@ border-bottom: 1px solid rgb(175, 199, 211);
 .cdi_vermelho_forte {
     background: #ED8B8B;
 }
+
+/* call to action */
+
+#cdi_call_to_action h4 {
+    color: #264D89;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+}
+
+#cdi_call_to_action .btn.btn-large.btn-primary {
+    font-size: 41px;
+    font-weight: bold;
+    padding: 25px;
+}
+
+#cdi_call_to_action.well.well-large {
+    background-color: #9CBFCF;
+}
