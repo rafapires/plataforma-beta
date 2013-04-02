@@ -12,36 +12,34 @@
  * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
+remove_filter ('the_excerpt', 'wpautop');
+function new_excerpt_more( $more ) {
+	return ' ...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 get_header(); ?>
+            
+            <section id="lista_projetos">
+                <div class="container">
+                    <ul class="thumbnails">
+                        <?php if (have_posts()) : ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                                <li class="span3">
+                                    <div class="cdi_box">
+                                        <h3 class='cdi_title_box'><?php the_title(); ?></h3>
+                                        <p class='cdi_content_box'><?php the_excerpt(); ?></p>
+                                        <a href="<?php the_permalink(); ?>" class="btn btn-primary cdi_footer_box">leia mais</a>
+                                    </div>
+                                </li>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </section>
 
-<section id="primary" class="span12">
-
-	<?php tha_content_before(); ?>
-	<div id="content" role="main">
-		<?php tha_content_top();
-		
-		if ( have_posts() ) : ?>
-
-			<?php
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( '/partials/content', get_post_format() );
-			}
-			the_bootstrap_content_nav();
-		else :
-			get_template_part( '/partials/content', 'not-found' );
-		endif;
-		
-		tha_content_bottom(); ?>
-	</div><!-- #content -->
-	<?php tha_content_after(); ?>
-</section><!-- #primary -->
-
-<?php
-//get_sidebar();
-get_footer();
-
+<?php get_footer();
 
 /* End of file archive.php */
 /* Location: ./wp-content/themes/the-bootstrap/archive.php */
+?>
