@@ -195,3 +195,20 @@ border-bottom: 1px solid rgb(175, 199, 211);
     padding: 0;
     background-color: #ffffff;
 }
+
+/* lista-projetos */
+#lista_projetos .cdi_title_box {
+    background-color: #9CC0D0;
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+    min-height: 86px;
+    padding: 0 10px;
+}
+
+#lista_projetos .cdi_footer_box {
+    margin: 0 0 16px 15px;
+}
+
+#lista_projetos p {
+    min-height: 220px;
+}
