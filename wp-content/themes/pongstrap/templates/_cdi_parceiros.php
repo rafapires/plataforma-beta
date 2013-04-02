@@ -14,7 +14,7 @@ get_header(); ?>
 	<div id="content" class='cdi_parceiros' role="main">
 		<?php tha_content_top();
 		
-		$cdi_tipos_parceiros = get_terms('tipo-parceiros');
+		$cdi_tipos_parceiros = get_terms('tipo-parceiros', 'order=DESC');
 
 		foreach ($cdi_tipos_parceiros as $cdi_tipo_parceiro) {
 
