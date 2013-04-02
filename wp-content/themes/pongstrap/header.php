@@ -58,12 +58,7 @@
 								<a href="https://twitter.com/ongCDI"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/twitter.jpg" alt="Visite nosso Twitter" height=38 width=38></a>
 								<a href="http://www.facebook.com/pageongcdi"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/facebook.jpg" alt="Visite nosso Facebook" height=38 width=38></a>
 							</div>
-						
-							<div class="row">
-								<div id="donate">
-								<a><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/donation.png" alt="Faça sua doação"></a>
-								</div>
-							</div>
+
 						</div>
 					</div>
 					<?php if ( get_header_image() ) : ?>
