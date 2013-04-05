@@ -213,3 +213,47 @@ border-bottom: 1px solid rgb(175, 199, 211);
 #lista_projetos p {
     min-height: 220px;
 }
+
+/* home */
+#cdi_numeros {
+    background-color: #A6BF56;
+    margin: 0 0 20px;
+    padding: 0 0 11px;
+}
+
+
+#cdi_numeros > h3 {
+    color: #FDFDFD;
+    font-size: 31px;
+    margin: 0 0 11px;
+    padding: 12px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#cdi_numeros table {
+    background-color: #FFFFFF;
+    color: #6EA300;
+    margin: 0 0 0 10px;
+    width: 348px;
+}
+
+.cdi_global_btn {
+    height: 137px;
+    padding: 10px 15px;
+}
+
+
+.cdi_logo_global {
+    height: 110px;
+}
+
+.cdi_global_btn > p {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 118%;
+    margin: 0 0 0 130px;
+    padding: 14px 0 0;
+    text-transform: uppercase;
+}
