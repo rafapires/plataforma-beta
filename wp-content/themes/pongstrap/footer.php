@@ -43,6 +43,21 @@
 				</footer><!-- #colophon -->
 				<?php tha_footer_after(); ?>
 	<!-- <?php printf( __( '%d queries. %s seconds.', 'the-bootstrap' ), get_num_queries(), timer_stop(0, 3) ); ?> -->
+	<!-- Modal -->
+	<div id="cdi_Modal_doacao" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="cdi_contato_modal" class="modal-header row-fluid">
+			<div class='span12'>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel" >Faça uma doação</h3>
+			</div>
+		</div>
+		<div class="cdi_modal-body">
+			<?php carrega_doacao(); ?>
+		</div>
+	</div>	
+	
+
+
 	<?php wp_footer(); ?>
 	</body>
 </html>
