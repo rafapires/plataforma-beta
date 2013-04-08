@@ -7,6 +7,7 @@ body {
 }
 #page {
 	background:transparent;
+    padding: 0px;
 }
 .cdi-redes-sociais img {
 	margin-left: 8px;
@@ -103,6 +104,8 @@ border-bottom: 1px solid rgb(175, 199, 211);
 }
 
 .cdi_thumb_lista_noticia img {
+    -webkit-border-radius: 88px 88px 88px 88px;
+    -moz-border-radius: 88px 88px 88px 88px;
     border-radius: 88px 88px 88px 88px;
     margin: 4px 23px;
 }
@@ -211,4 +214,90 @@ border-bottom: 1px solid rgb(175, 199, 211);
 
 #lista_projetos p {
     min-height: 220px;
+}
+
+/* home */
+#cdi_numeros {
+    background-color: #A6BF56;
+    margin: 0 0 20px;
+    padding: 0 0 11px;
+}
+
+
+#cdi_numeros > h3 {
+    color: #FDFDFD;
+    font-size: 31px;
+    margin: 0 0 11px;
+    padding: 12px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#cdi_numeros table {
+    background-color: #FFFFFF;
+    color: #6EA300;
+    margin: 0 0 0 10px;
+    width: 348px;
+}
+
+.cdi_global_btn {
+    height: 137px;
+    padding: 10px 15px;
+}
+
+
+.cdi_logo_global {
+    height: 110px;
+}
+
+.cdi_global_btn > p {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 118%;
+    margin: 0 0 0 130px;
+    padding: 14px 0 0;
+    text-transform: uppercase;
+}
+
+/* header */
+
+.cdi-redes-sociais img {
+    background-color: #9BC0CF;
+}
+
+.cdi_doacao {
+    margin-top: 15px;
+}
+
+/* modal doacao */
+#cdi_contato_modal {
+    background-color: #9B351F;
+    border-radius: 4px 4px 0 0;
+    color: #FFFFFF;
+    width: 530px;
+}
+
+.cdi_modal-body {
+    padding: 10px;
+}
+
+.cdi_modal-body > p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.cdi_conta {
+    background-color: lightblue;
+    border-radius: 6px 6px 6px 6px;
+    color: blue;
+    font-size: 23px;
+}
+
+.cdi_modal-body h2 {
+    background-color: lightgreen;
+    border-radius: 6px 6px 6px 6px;
+    color: green;
+    padding: 16px 0;
+    text-align: center;
 }
