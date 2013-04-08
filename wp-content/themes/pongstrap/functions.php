@@ -1100,7 +1100,16 @@ function custom_taxonomies_terms_slugs($cdi_postID) {
 	return $out;
 } 
 
+// carrega doacao no modal
+function carrega_doacao () {
+	$post = get_post(309);
+	if ($post) {
+		setup_postdata( $post );
+		the_content();
+	}
 
+
+}
 
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */
