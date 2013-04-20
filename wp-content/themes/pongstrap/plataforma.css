@@ -3,8 +3,8 @@ body {
 	font: 14px 'DroidSansRegular', Arial, sans-serif;
 	color: #6B6B6B;
 	background-color: white;
-	background-image: url(img/bg.jpg);
 }
+
 #page {
 	background:transparent;
     padding: 0px;
@@ -19,6 +19,15 @@ body {
 	width: 220px;
 	height: 38px;
 }
+
+
+header {
+        background-image: url(img/bg_header-724.jpg);
+        background-repeat: no-repeat;
+        background-position: right top;
+}
+
+
 /*FOOTER*/
 #colophon {
 	background: url('img/banner_bg.jpg');
