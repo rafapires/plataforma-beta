@@ -62,6 +62,9 @@
 							<img src='<?php bloginfo('template_directory'); ?>/img/donation.png' />
 						</a>
 					</div>
+					<div class='row cdi_translate'>
+						<?php if(function_exists("transposh_widget")) { transposh_widget(array(), array('title' => 'Translation', 'widget_file' => 'flags/tpw_flags.php')); }?>
+					</div>
 
 				</div>
 			</div>
@@ -71,6 +74,9 @@
 			</a>
 			<?php endif; // if ( get_header_image() ) ?>
 			</div>
+
+
+
 
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>

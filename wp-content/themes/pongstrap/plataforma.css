@@ -279,6 +279,13 @@ border-bottom: 1px solid rgb(175, 199, 211);
     margin-top: 15px;
 }
 
+
+.cdi_translate {
+margin: 16px 0 0 0;
+text-align: right;
+}
+
+
 /* modal doacao */
 #cdi_contato_modal {
     background-color: #9B351F;
@@ -310,3 +317,4 @@ border-bottom: 1px solid rgb(175, 199, 211);
     padding: 16px 0;
     text-align: center;
 }
+
