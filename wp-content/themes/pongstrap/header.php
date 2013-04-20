@@ -50,13 +50,6 @@
 				</div>
 				
 				<div class="cdi-redes-sociais span3">
-					<div class="row">
-					<!--h2 id="site-description"><?php bloginfo( 'description' ); ?></h2-->
-						<a target="_blank" href="<?php bloginfo(url); ?>/feed"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/rss.jpg" alt="Assine nosso RSS" height=38 width=38></a>
-						<a target="_blank" href="http://www.youtube.com/user/redecdi"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/youtube.jpg" alt="Visite nosso canal no Youtube" height=38 width=38></a>
-						<a target="_blank" href="https://twitter.com/ongCDI"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/twitter.jpg" alt="Visite nosso Twitter" height=38 width=38></a>
-						<a target="_blank" href="http://www.facebook.com/pageongcdi"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/facebook.jpg" alt="Visite nosso Facebook" height=38 width=38></a>
-					</div>
 					<div class='row'>
 						<a href="#cdi_Modal_doacao" data-toggle="modal" class='pull-right cdi_doacao'>
 							<img src='<?php bloginfo('template_directory'); ?>/img/donation.png' />
