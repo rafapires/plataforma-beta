@@ -63,6 +63,9 @@
 									<img src='<?php bloginfo('template_directory'); ?>/img/donation.png' />
 								</a>
 							</div>
+							<div class='row cdi_translate'>
+								<?php if(function_exists("transposh_widget")) { transposh_widget(array(), array('title' => 'Translation', 'widget_file' => 'flags/tpw_flags.php')); }?>
+							</div>
 
 						</div>
 					</div>
