@@ -50,14 +50,15 @@
 				</div>
 				
 				<div class="cdi-redes-sociais span3">
+					<div class='row cdi_translate'>
+						<?php if(function_exists("transposh_widget")) { transposh_widget(array(), array('title' => 'Translation', 'widget_file' => 'flags/tpw_flags.php')); }?>
+					</div>
 					<div class='row'>
 						<a href="#cdi_Modal_doacao" data-toggle="modal" class='pull-right cdi_doacao'>
 							<img src='<?php bloginfo('template_directory'); ?>/img/donation.png' />
 						</a>
 					</div>
-					<div class='row cdi_translate'>
-						<?php if(function_exists("transposh_widget")) { transposh_widget(array(), array('title' => 'Translation', 'widget_file' => 'flags/tpw_flags.php')); }?>
-					</div>
+
 
 				</div>
 			</div>
