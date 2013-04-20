@@ -295,6 +295,18 @@ border-bottom: 1px solid rgb(175, 199, 211);
     float: right;
 }
 
+@media (min-width: 1200px) {
+    .navbar .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 979px) and (max-width: 1200px) {
+    .navbar .container {
+        width: 940px;
+    }
+}
+
 /* modal doacao */
 #cdi_contato_modal {
     background-color: #9B351F;
