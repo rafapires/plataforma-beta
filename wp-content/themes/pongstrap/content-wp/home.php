@@ -24,29 +24,29 @@
 </div>
 
 <div class='row-fluid' id='cdi_home_boxes'>
-	<ul class='thumbnail'>
+	<ul class='thumbnails'>
 		<li class='span4'>
-			<div class='thumbnails'>
+			<div class='thumbnail'>
 				<h3 class='cdi_verde'>Projetos</h3>
 				<img src='wp-content/themes/pongstrap/img/home-box-1.jpg' />
 				<p>O CDI desenvolve projetos especificamente para as realidades das comunidades de forma modular e complementar, podendo assim uma comunidade ter vários projetos ao mesmo tempo.</p>
-				<a href='#' class='btn btn-large btn-primary cdi_vermelho'>Lista dos projetos</a>
+				<a href='#' class='btn btn-large cdi_verde'>Lista dos projetos</a>
 			</div>
 		</li>
 		<li class='span4'>
-			<div class='thumbnails'>
-				<h3 class='cdi_azul'>CDI GLobal</h3>
+			<div class='thumbnail'>
+				<h3 class='cdi_azul'>CDI Global</h3>
 				<img src='wp-content/themes/pongstrap/img/home-box-2.jpg' />
 				<p>Em 12 países o CDI tem projetos na América Latina, Estados Unidos e Europa aplicados pelos seus 780 centros de inclusão digital.</p>
-				<a href='#' class='btn btn-large btn-primary cdi_azul'>Veja nosso mapa</a>
+				<a href='#' class='btn btn-large cdi_azul'>Veja nosso mapa</a>
 			</div>
 		</li>
 		<li class='span4'>
-			<div class='thumbnails'>
+			<div class='thumbnail'>
 				<h3 class='cdi_vermelho'>História de sucesso</h3>
 				<img src='wp-content/themes/pongstrap/img/home-box-3.jpg' />
 				<p>Em 18 anos, o CDI colecionou diversas histórias inspiradoras de superação, colaboração e união. Histórias lindas que nos fazem ter orgulho de cada membro da rede CDI</p>
-				<a href='#' class='btn btn-large btn-primary cdi_vermelho'>Conheça mais nossa história</a>
+				<a href='#' class='btn btn-large cdi_vermelho'>Conheça mais nossa história</a>
 			</div>
 		</li>
 	</ul>
