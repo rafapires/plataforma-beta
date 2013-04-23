@@ -43,7 +43,7 @@
 		</li>
 		<li class='span4'>
 			<div class='thumbnail'>
-				<h3 class='cdi_vermelho'>História de sucesso</h3>
+				<h3 class='cdi_vermelho'>Histórias de sucesso</h3>
 				<img src='wp-content/themes/pongstrap/img/home-box-3.jpg' />
 				<p>Em 18 anos, o CDI colecionou diversas histórias inspiradoras de superação, colaboração e união. Histórias lindas que nos fazem ter orgulho de cada membro da rede CDI</p>
 				<a href='#' class='btn btn-large cdi_vermelho'>Conheça mais nossa história</a>
