@@ -1,9 +1,9 @@
 <?php
 /** footer.php
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0	- 05.02.2012
+ * @author		Rafael D´Alessandro Pires
+ * @package		Pongstrap
+ * @since		0.3.0	- 03.05.2013
  */
 ?>
 				
@@ -13,23 +13,32 @@
 				<footer id="colophon" role="contentinfo">
 					<?php tha_footer_top(); ?>
 					<div id="page-footer" class="clearfix container">
-						<div class="span6">
-							<span>MAPA DO SITE</span>
+						<div class="span4 cdi_mapa_site">
+							<span class='cdi_title_footer'>MAPA DO SITE</span>
 							<?php wp_nav_menu( array(
 								'container'			=>	'nav',
 								'container_class'	=>	'subnav',
 								'theme_location'	=>	'footer-menu',
-								'menu_class'		=>	'credits nav nav-pills pull-left',
+								'menu_class'		=>	'nav nav-tabs nav-stacked',
 								'depth'				=>	3,
 								'fallback_cb'		=>	'the_bootstrap_credits',
 								'walker'			=>	new The_Bootstrap_Nav_Walker,
 							) );
 							?>
 						</div>
-						<div id="footer-right" class="cdi-redes-sociais social span2 pull-right">
+						<div class="cdi-redes-sociais social span2 pull-right">
+							<div class='cdi_global_site'>
+								<a href='http://cdiglobal.org/' target='_blank'>
+									<img src='<?php bloginfo('template_directory'); ?>/img/CDI-GLOBAL.png'>
+									<p>Visit our international site</p>
+								</a>
+							</div>
+
+
+
 							<!-- Social Media Buttons -->
 							
-							<div class="row">CDI NAS REDES SOCIAIS</div>
+							<div class='cdi_title_footer'>CDI NAS REDES SOCIAIS</div>
 							<div class="row">
 								<a href="<?php bloginfo(url); ?>/feed"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/rss.jpg" alt="Assine nosso RSS" height=38 width=38></a>
 								<a href="http://www.youtube.com/user/redecdi"><img class="pull-right" src="<?php bloginfo('template_directory'); ?>/img/youtube.jpg" alt="Visite nosso canal no Youtube" height=38 width=38></a>
