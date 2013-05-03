@@ -22,3 +22,9 @@ usando o xampp
 - - Custom Content Type Manager
 - - Simple taxonomy
 - - wordpress importer
+
+
+Versões
+=======
+
+0.3.0 - novo footer com banner para site global
