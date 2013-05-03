@@ -1,9 +1,9 @@
 <?php
 /** footer.php
  *
- * @author		Konstantin Obenland
- * @package		The Bootstrap
- * @since		1.0.0	- 05.02.2012
+ * @author		Rafael D´Alessandro Pires
+ * @package		Pongstrap
+ * @since		0.3.0	- 03.05.2013
  */
 ?>
 				
