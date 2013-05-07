@@ -26,6 +26,8 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
+
+
 		<?php tha_header_before(); ?>
 		<header id="branding" role="banner">
 			<?php tha_header_top();
@@ -38,6 +40,13 @@
 				'fallback_cb'		=>	false,
 				'walker'			=>	new The_Bootstrap_Nav_Walker,
 			) ); ?>
+
+			<!-- #ajuda -->
+			<div class='clearfix'>
+				<a href='index.php?p=412' class='cdi_ajuda'>Perguntas Frequêntes</a>
+			</div>
+
+			<!-- #header -->
 			<div class='container'>
 			<div class="row">					
 				<div id="cdi-logo" class="span9">						
@@ -105,12 +114,16 @@
 					</div>
 				</div>
 				<?php endif; ?>
-			</nav><!-- #access -->
+			</nav>
+			<!-- #access -->
 			<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 				yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
 			}
 			tha_header_bottom(); ?>
-		</header><!-- #branding -->
+
+		</header>
+
+		<!-- #branding -->
 
 		<div class="container">
 			<div id="page" class="hfeed row">
