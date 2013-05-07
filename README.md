@@ -27,4 +27,8 @@ usando o xampp
 Versões
 =======
 
+0.4.0 - novo sistema de "perguntas frequentes"
+         - instala plugin "Q and A FAQ and Knowledge Base for WordPress"
+         - cria botão flutuante na lateral do site
+         - utiliza Formidable para inserir automáticamente as perguntas no FAQ e enviar email para usuário automáicamente ao responder dúvida pelo wp-admin
 0.3.0 - novo footer com banner para site global
