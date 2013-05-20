@@ -43,7 +43,7 @@
 
 			<!-- #ajuda -->
 			<div class='clearfix'>
-				<a href='index.php?p=412' class='cdi_ajuda'>Perguntas Frequêntes</a>
+				<a href='<?php echo esc_url( home_url( '/ajuda' ) ); ?>' class='cdi_ajuda'>Perguntas Frequêntes</a>
 			</div>
 
 			<!-- #header -->
