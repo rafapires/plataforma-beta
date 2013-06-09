@@ -18,28 +18,46 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-get_header(); ?>
+get_header();
+?>
+
+      <div id="destaque" class="carousel slide span8 offset2">
+        <div class='carousel-inner'>
+          <?php $destaque = new WP_query(array(
+                  'post_type' => 'projeto_post',
+                  'orderby' => 'rand',
+                  'meta_query' => array(
+                      array(
+                          'key' => 'cdi_destaque',
+                          'value' => 1,
+                      )
+                  )
+                ));
+
+          $inicio=1;
+          while($destaque->have_posts()) : $destaque->the_post(); ?>
+            <div class='item<?php if($inicio==1){ echo " active"; $inicio=2; } ?>'>
+              <a href='<?php the_permalink(); ?>'>
+                  <img src='http://placehold.it/800x300' />
+                  <!-- <?php the_post_thumbnail('full',array('class'=>'destaque')); ?> -->
+                  <div class='carousel-caption'>
+                        <h4><?php the_title();?></h4>
+                        <?php the_excerpt();?>
+                  </div>
+              </a>
+            </div>
+          <?php endwhile;
+          wp_reset_postdata(); ?>
+        </div><!-- carousel-inner -->
+          <a class="left carousel-control" href="#destaque" data-slide="prev">‹</a>
+          <a class="right carousel-control" href="#destaque" data-slide="next">›</a>
+     </div><!-- carousel -->
+
+
+
             
-            <section id="lista_projetos">
-                <div class="container">
-                    <ul class="thumbnails">
-                        <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
-                                <li class="span3">
-                                    <div class="cdi_box">
-                                        <h3 class='cdi_title_box'><?php the_title(); ?></h3>
-                                        <p class='cdi_content_box'><?php the_excerpt(); ?></p>
-                                        <a href="<?php the_permalink(); ?>" class="btn btn-primary cdi_footer_box">leia mais</a>
-                                    </div>
-                                </li>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-            </section>
 
 <?php get_footer();
 
 /* End of file archive.php */
 /* Location: ./wp-content/themes/the-bootstrap/archive.php */
-?>

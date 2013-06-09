@@ -23,6 +23,8 @@
 		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
 		<link rel="stylesheet" href="<?php bloginfo(template_url) ?>/plataforma.css" type="text/css" media="all">
+		<script type="text/javascript" async src="<?php bloginfo(template_url) ?>/js/bootstrap.js"></script>
+		<script type="text/javascript" async src="<?php bloginfo(template_url) ?>/js/the-bootstrap.js"></script>
 	</head>
 	
 	<body <?php body_class(); ?>>
