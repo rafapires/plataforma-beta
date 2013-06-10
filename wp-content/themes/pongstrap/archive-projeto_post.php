@@ -53,6 +53,48 @@ get_header();
           <a class="right carousel-control" href="#destaque" data-slide="next">›</a>
      </div><!-- carousel -->
 
+     <div class='row'>
+        <div class='span4 well well-small'>
+            <h4>Nossa rede</h4>
+            <span>Donec semper tempor massa nec consequat. Nam interdum, est ac scelerisque molestie, diam urna accumsan mi, dignissim condimentum dui nullam.</span>
+            <?php $canal = new WP_query(array(
+                'post_type' => 'projeto_post',
+                'tipo-projetos' => 'canal',
+                'orderby' => 'rand'
+                ));
+                while ($canal->have_posts()) : $canal->the_post(); ?>
+                    <a class='btn btn-block' href='<?php the_permalink(); ?>'><?php the_title(); ?></a>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+        </div>
+
+        <div class='span4 well well-small'>
+            <h4>Projetos</h4>
+            <span>Donec semper tempor massa nec consequat. Nam interdum, est ac scelerisque molestie, diam urna accumsan mi, dignissim condimentum dui nullam.</span>
+            <?php $geral = new WP_query(array(
+                'post_type' => 'projeto_post',
+                'tipo-projetos' => 'geral',
+                'orderby' => 'rand'
+                ));
+                while ($geral->have_posts()) : $geral->the_post(); ?>
+                    <a class='btn btn-block' href='<?php the_permalink(); ?>'><?php the_title(); ?></a>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+        </div>
+        <div class='span4 well well-small'>
+            <h4>Chamadas</h4>
+            <span>Donec semper tempor massa nec consequat. Nam interdum, est ac scelerisque molestie, diam urna accumsan mi, dignissim condimentum dui nullam.</span>
+            <?php $chamada = new WP_query(array(
+                'post_type' => 'projeto_post',
+                'tipo-projetos' => 'chamada',
+                'orderby' => 'rand'
+                ));
+                while ($chamada->have_posts()) : $chamada->the_post(); ?>
+                    <a class='btn btn-block' href='<?php the_permalink(); ?>'><?php the_title(); ?></a>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+        </div>
+    </div>
 
 
             
