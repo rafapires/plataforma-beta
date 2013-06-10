@@ -39,8 +39,11 @@ get_header();
           while($destaque->have_posts()) : $destaque->the_post(); ?>
             <div class='item<?php if($inicio==1){ echo " active"; $inicio=2; } ?>'>
               <a href='<?php the_permalink(); ?>'>
-                  <img src='http://placehold.it/800x300' />
-                  <!-- <?php the_post_thumbnail('full',array('class'=>'destaque')); ?> -->
+                  <?php if (has_post_thumbnail()) {
+                        the_post_thumbnail('full',array('class'=>'destaque'));
+                  }else{?>
+                        <img src='http://placehold.it/800x300' />
+                  <?php } ?>
                   <div class='carousel-caption'>
                         <h4><?php the_title();?></h4>
                         <?php the_excerpt();?>
