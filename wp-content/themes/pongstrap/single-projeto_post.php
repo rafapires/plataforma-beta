@@ -4,8 +4,8 @@
  * Template Name: pagina projeto
  *
  * @author 	Rafael D´Alessandro Pires
- * @package The Bootstrap
- * @since	1.3.0	- 29.04.2012
+ * @package Pongstrap
+ * @since	0.5.0 - 09.06.2013
  */
 
 get_header();

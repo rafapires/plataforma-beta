@@ -27,6 +27,7 @@ usando o xampp
 Versões
 =======
 
+0.5.0 - nova pagina capa para projetos com carrocel de destaque e lista dos projetos separado por sessões (categorias do projeto-post)
 0.4.2 - concerta link do botão "perguntas frequentes"
 0.4.1 - acerta a imgem do cabeçalho, resolução e algumas gotas em vermelho.
 
