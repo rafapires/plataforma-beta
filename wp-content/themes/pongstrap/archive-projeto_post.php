@@ -42,7 +42,7 @@ get_header();
                   <?php if (has_post_thumbnail()) {
                         the_post_thumbnail('full',array('class'=>'destaque'));
                   }else{?>
-                        <img src='http://placehold.it/800x300' />
+                        <img src='http://placehold.it/770x300' />
                   <?php } ?>
                   <div class='carousel-caption'>
                         <h4><?php the_title();?></h4>

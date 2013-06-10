@@ -448,3 +448,10 @@ text-align: justify;
 }
 
 /* FAQ */
+
+
+/* Capa Projetos */
+#destaque .item {
+    margin: 0px;
+    height: 300px;
+}
