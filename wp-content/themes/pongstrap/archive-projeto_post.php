@@ -26,6 +26,7 @@ get_header();
           <?php $destaque = new WP_query(array(
                   'post_type' => 'projeto_post',
                   'orderby' => 'rand',
+                  'posts_per_page' => 5,
                   'meta_query' => array(
                       array(
                           'key' => 'cdi_destaque',
